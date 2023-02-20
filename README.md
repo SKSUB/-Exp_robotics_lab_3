@@ -4,5 +4,6 @@ Purpose of this repository is to develop the assignment 3 of Experimental Roboti
 
 ## SOFTWARE ARCHITECTURE
 In order to better understand the software architecture we can utilise the UML component diagram
+
 ![cluedo_mapping](https://user-images.githubusercontent.com/82164428/219997455-ae5f1b28-13f5-4b94-b0a2-33d4bc6ebafd.jpg)
 
