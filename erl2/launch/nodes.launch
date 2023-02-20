@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find erl2)/launch/gmapping.launch"></include>
+   <arg name="ontology" default="$(find erl2)/cluedo_ontology.owl" />
+
+   <node name="ontology_interface"  pkg="erl2" type="ontology_interface.py" output="screen">
+      <param name="ontology"               value="$(arg ontology)"/>
+   </node>
+   <node name="marker_publisher" pkg ="aruco_ros" type="marker_publisher" args="/image:=/robot/camera1/image_raw"/>
+   <node name="simulation" pkg ="exp_assignment3" type="final_oracle"  /> 
+   <node name="movearm" pkg ="erl2" type="movearm"  /> 
+   <node name="state_machine" pkg ="erl2" type="state_machine.py"  output="screen"/> 
+   
+</launch>
