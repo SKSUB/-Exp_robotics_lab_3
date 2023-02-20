@@ -84,7 +84,7 @@ In order to run the simulation clone this repostitory into your workspace. If yo
 
     git clone https://github.com/SKSUB/Exp_robotics_lab_2
     
-    After cloning usual procedures of building the package, and install the dependencies based on the error.
+After cloning usual procedures of building the package, and install the dependencies based on the error.
 
     catkin_make
     
@@ -111,6 +111,18 @@ Autonomous navigation of the robot based on the goal.
 In order to better visualise the nodes and the software architecure, here is the rqt_graph:
 
 ![rqt_graph](https://user-images.githubusercontent.com/82164428/220027325-dee34e37-fcb1-4466-988c-2f10d4b69d1b.png)
+
+## SYSTEM WORKING AND LIMITATIONS
+The system works as a finite state machine, the robot will be in one of the three states; Move, check consistency or solution checking. Based on the state corresponding actions are executed. Robot will be navigating the environment based on the goal. And comes to oracle to check the solutio to end the game.
+
+This system is time consuming in the aspect of robot movement. Robot covers lots of distance in this simulation. It is slow process. And also the random hint genration process even more slower. And has usual miss firing of the nodes will lead to simulation failure. Sometimes the navigation of the robot stops and also there is stuck in th simulatio due to overconsuming of the main simulation node. And also the marker postion are send and need to wait to get the hints and also there are more time to check the consistency and solution chekcing. And also some nodes been killed due to wait times in the machine. 
+
+In order to overcome the issue, the nodes are monitored and the parameters are altered to speed up the simulation process.
+
+
+## CONTACTS
+
+SATHISH KUMAR SUBRAMANI. ROBOTICS ENGINEER, UNIGE. 4847560@studenti.unige.it
 
 
 
