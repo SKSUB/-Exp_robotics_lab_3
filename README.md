@@ -42,7 +42,7 @@ This node recieves the hint from the state_machine node node and add them. And i
 This is the class method to communicate with the Armor service. It is based on the message format to be communicated with the Armor service.
 
 ### place class:
-THis is the class to create a place object.
+This is the class to create a place object.
 
 ### src:
 ### movearm.cpp:
@@ -63,3 +63,21 @@ Config folder has the rviz configuration and all the motor configurations.
 Param folder has all the parameters for the ros SLAM  and navigation. 
 
 The cluedo_onotolg.owl initial scene setup. And the simulation.sh for launching the simulation with the aid of genome terminal.
+
+### OTHER PACKAGES 
+ARMOR SERVICE (More details in https://github.com/EmaroLab/armor)
+
+MOVE_BASE (More details in https://wiki.ros.org/move_base)
+
+GMAPPING (More details in https://wiki.ros.org/gmapping)
+
+ROS NAVIGATION (More details in https://wiki.ros.org/navigation?distro=noetic)
+
+MOVEIT (older version)  
+
+In order to understand the workflow of simulation here is the temporal diagram:
+
+![cluedo_mapping_temp](https://user-images.githubusercontent.com/82164428/220025431-c41aa52e-1fad-4e35-9229-17c79f47169c.jpg)
+
+
+
