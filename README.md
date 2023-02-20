@@ -79,5 +79,40 @@ In order to understand the workflow of simulation here is the temporal diagram:
 
 ![cluedo_mapping_temp](https://user-images.githubusercontent.com/82164428/220025431-c41aa52e-1fad-4e35-9229-17c79f47169c.jpg)
 
+## INSTALLATION AND RUNNING:
+In order to run the simulation clone this repostitory into your workspace. If you are running on the docker machine of the course no need to clone other packages. Otherwise clone all the packages to the workspace.
+
+    git clone https://github.com/SKSUB/Exp_robotics_lab_2
+    
+    After cloning usual procedures of building the package, and install the dependencies based on the error.
+
+    catkin_make
+    
+In order to start the simulation:
+
+    ./simulation.sh
+
+It starts all the necessry nodes to simulate the simulation of the game.
+
+Following are the pictures of the simulation
+
+![simulation intitiliased](https://user-images.githubusercontent.com/82164428/220026738-c8e27d49-772c-4d0d-aa6d-9df574833163.png)
+
+Simulation is initialised in the above picture 
+
+![all the nodes intialised with the ontology](https://user-images.githubusercontent.com/82164428/220026896-c1fcedf1-a531-4fad-8ad8-68d411eaf0ce.png)
+
+All the nodes are launched and the onbtology is loaded to the simulation
+
+![Screenshot 2023-02-20 022835](https://user-images.githubusercontent.com/82164428/220027027-65bb8eef-0fc4-41b4-8366-9c6e93707c3b.png)
+
+Autonomous navigation of the robot based on the goal.
+
+In order to better visualise the nodes and the software architecure, here is the rqt_graph:
+
+![rqt_graph](https://user-images.githubusercontent.com/82164428/220027325-dee34e37-fcb1-4466-988c-2f10d4b69d1b.png)
+
+
+
 
 
