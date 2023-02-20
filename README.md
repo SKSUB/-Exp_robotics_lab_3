@@ -25,3 +25,29 @@ aruco_ros folder has predefined package, miner alteration is done to publish the
 
 exp_assignment_3 folder is already provided and only the dependencies are added.
 
+### erl2:
+The folder has all the developed scripts to run the simulation
+
+### Scripts:
+### state_machine.py 
+This is the main node of the architecture, it implements the finite state machine. The robot will be in the one of these three states, (move, check consistency and solution).
+MOVE state: It is moving state class, in which the robot is move from one room to another in the continuous to collect all the hints. It checks whether the robot should move in a oracle room or other room to check the soution or to collect the hints. 
+CHECK CONSISTENCY state: In this state all the aruco IDs are received and the corresponding hints are collected from the /oracle_hint. Then it stores the hints and check for consistency and if they are consistent it ask the robot to move to the oracle room to check the solution or it ask to move to other room otherwise and also remove the hint from the ontology if they are inconsistent.
+SOLUTION state: This is the state where the robot checks the solution received via /oracle_solution service, if the solution is correct the game ends or the game is continues i.e to the move state.
+
+### ontology_interface.py
+This node recieves the hint from the state_machine node node and add them. And it checks the received hint is whether consistent and complete. When the recieved solutio is consistent and complete it gives the solution ID to the /ask_solution, otherwise removes them from the onotology. 
+
+### myArmor class:
+This is the class method to communicate with the Armor service. It is based on the message format to be communicated with the Armor service.
+
+### place class:
+THis is the class to create a place object.
+
+### src:
+### movearm.cpp:
+This node implements the MovearmActionInterface: the corresponding behaviour for the movearm action defined with the moveit setup assistant.
+
+
+     
+
